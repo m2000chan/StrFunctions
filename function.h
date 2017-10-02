@@ -1,6 +1,6 @@
-int strlen( char * );
-char * strncpy( char *dest, char *source, int n);
-char * strncat( char *dest, char *source, int n);
-int strcmp( char *s1, char *s2 );
-char * strchr( char *s, char c );
-char * strstr( char *s1, char * s2 );
+int mystrlen( char * );
+char * mystrncpy( char *dest, char *source, int n);
+char * mystrncat( char *dest, char *source, int n);
+int mystrcmp( char *s1, char *s2 );
+char * mystrchr( char *s, char c );
+char * mystrstr( char *s1, char * s2 );
