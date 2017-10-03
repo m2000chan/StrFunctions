@@ -2,28 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
-<<<<<<< HEAD
 char * mystrncpy( char *dest, char *source, int n){
     while(n + 1){
-        dest[n] = source[n];
+        dest[n-1] = source[n-1];
         n--;
     }
 
     return dest;
 }
 
-int main(){
-    
-    printf("Testing mystrncpy:\n\n");
-    char a[] = "Hello";
-    char b[] = "Hi";
-    char c[10];
-
-    printf("Creating strings a, b, c:\n\n\ta: %s\n\tb: %s\n\tc: %s\n\n", a, b, c);
-    printf("Running mystrncpy(b, a, 3)...\n\n");
-    mystrncpy(b, a, 1);
-    printf("Result:\n\n\ta: %s\n\tb: %s\n\tc: %s\n", a, b, c);
-=======
 int strlen2(char * c){
   int i = 0;
   while(c[i]){
@@ -33,14 +20,24 @@ int strlen2(char * c){
 }
 
 int main(){
-  char a[6] = "hello";
-  char b[2] = "a";
-  char c[1] = "";
+    
+    printf("Testing mystrncpy:\n\n");
+    char x[] = "Hello";
+    char y[] = "Hi";
+    char z[10];
 
-  printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(a), strlen2(a));
-  printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(b), strlen2(b));
-  printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(c), strlen2(c));
+    printf("Creating strings x, y, z:\n\n\tx: %s\n\ty: %s\n\tz: %s\n\n", x, y, z);
+    printf("Running mystrncpy(b, a, 3)...\n\n");
+    mystrncpy(b, a, 1);
+    printf("Result:\n\n\ta: %s\n\tb: %s\n\tc: %s\n", a, b, c);
+    
+    char a[6] = "hello";
+    char b[2] = "a";
+    char c[1] = "";
 
-  return 0; 
->>>>>>> 4b315c13e49523b6a31e4e0f6304f30eceb0c8ca
+    printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(a), strlen2(a));
+    printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(b), strlen2(b));
+    printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(c), strlen2(c));
+
+    return 0; 
 }
