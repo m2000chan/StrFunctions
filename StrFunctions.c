@@ -23,12 +23,12 @@ int main(){
     
     printf("Testing mystrncpy:\n\n");
     char x[] = "Hello";
-    char y[10];
+    char y[10] = "";
 
     printf("Creating strings x, y:\n\n\tx: %s\n\ty: %s\n\n", x, y);
-    printf("Running mystrncpy(x, y, 3)...\n\n");
-    mystrncpy(x, y, 3);
-    printf("Result:\n\n\tx: %s\n\ty: %s\n", x, y);
+    printf("Running mystrncpy(y, x, 3)...\n\n");
+    mystrncpy(y, x, 3);
+    printf("Result:\n\n\tMine:\n\n\t\tx: %s\n\t\ty: %s\n", x, y);
     
     char a[6] = "hello";
     char b[2] = "a";
