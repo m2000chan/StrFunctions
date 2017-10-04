@@ -9,14 +9,23 @@ int strlen2(char * c){
   return i;
 }
 
-int main(){
-  char a[6] = "hello";
-  char b[2] = "a";
-  char c[1] = "";
+char* strncat2(char *dest, char *source, int n){
+  int i = -1;
+  int len = strlen2(dest);
+  for(; i < n - 1; i++){
+    dest[len+i] = source[i+1];
+  }
+  return dest;
+}
 
-  printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(a), strlen2(a));
-  printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(b), strlen2(b));
-  printf("Testing strlen():\n[standard]:%d\n[mine]:%d\n", strlen(c), strlen2(c));
-
-  return 0; 
+int mystrcmp( char *s1, char *s2 ){
+  int tot1 = 0;
+  int tot2 = 0;
+  int i = 0;
+  while(s1[i] && s2[i]){
+    tot1 += s1[i];
+    tot2 += s2[i];
+    i++;
+  }
+  return tot1 - tot2;
 }
