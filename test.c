@@ -39,7 +39,7 @@ int main(){
     const char m[] = "The quick brown fox jumped over the lazy dog";
     const char n = 'z';
     printf("\t[standard]:\t%s\n", strchr(v, u));
-    printf("\t[mine]:\t\t&s\n", mystrchr(m, n));
+    printf("\t[mine]:\t\t%s\n", mystrchr(m, n));
     
       return 0;
 }

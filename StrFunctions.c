@@ -30,10 +30,14 @@ char* strncat2(char *dest, char *source, int n){
   return dest;
 }
 
-char * mystrchr(char *s, char c){
-    int *p = s;
+char * mystrchr(char * s, char c){
+    char *p = s;
+    //printf("%s", p);
     while(*p != c){
         p++;
+	if (p > ( s + strlen(s))){
+	  return NULL;
+	}
     }
     
     return p;
