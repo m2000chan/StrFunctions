@@ -11,6 +11,8 @@ char * mystrncpy( char *dest, char *source, int n){
     return dest;
 }
 
+
+
 int strlen2(char * c){
   int i = 0;
   while(c[i]){
@@ -26,6 +28,17 @@ char* strncat2(char *dest, char *source, int n){
     dest[len+i] = source[i+1];
   }
   return dest;
+}
+
+char * mystrchr( char *s, char c ){
+    int *p = s;
+    
+    while(*p != c){
+        p++;
+    }
+    
+    return p;
+    
 }
 
 int mystrcmp( char *s1, char *s2 ){
