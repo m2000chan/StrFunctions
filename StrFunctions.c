@@ -30,9 +30,8 @@ char* strncat2(char *dest, char *source, int n){
   return dest;
 }
 
-char * mystrchr( char *s, char c ){
+char * mystrchr(char *s, char c){
     int *p = s;
-    
     while(*p != c){
         p++;
     }

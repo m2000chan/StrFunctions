@@ -23,14 +23,23 @@ int main(){
   // testing strcmp
   printf("Testing strcmp():\n\t[standard]:%d\n\t[mine]:%d\n", strcmp(a,b), mystrcmp(a,b));
 
-  printf("Testing mystrncpy:\n\n");
+  
   char x[] = "Hello";
   char y[10] = "";
+    char z[] = "Hello";
+    char w[10] = "";
+    printf("Testing mystrncpy():\n");
+    printf("\t[standard]:\t%s\n", strncpy(y,x,3));
+    printf("\t[mine]:\t\t%s\n", mystrncpy(w,z,3));
 
-  printf("Creating strings x, y:\n\n\tx: %s\n\ty: %s\n\n", x, y);
-  printf("Running mystrncpy(y, x, 3)...\n\n");
-  mystrncpy(y, x, 3);
-  printf("Result:\n\n\tMine:\n\n\t\tx: %s\n\t\ty: %s\n", x, y);
-
-  return 0; 
+    
+    printf("Testing mystrchr:\n");
+    const char v[] = "The quick brown fox jumped over the lazy dog";
+    const char u = 'z';
+    const char m[] = "The quick brown fox jumped over the lazy dog";
+    const char n = 'z';
+    printf("\t[standard]:\t%s\n", strchr(v, u));
+    printf("\t[mine]:\t\t&s\n", mystrchr(m, n));
+    
+      return 0;
 }
