@@ -6,5 +6,6 @@ test:
 	gcc -c test.c 
 clean:
 	rm StrFunctions
+	rm *.o
 run: all
 	./StrFunctions
