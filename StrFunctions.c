@@ -1,5 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+
+char * mystrncpy( char *dest, char *source, int n){
+    while(n + 1){
+        dest[n-1] = source[n-1];
+        n--;
+    }
+
+    return dest;
+}
 
 int strlen2(char * c){
   int i = 0;
