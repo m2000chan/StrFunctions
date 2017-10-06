@@ -32,12 +32,11 @@ char* strncat2(char *dest, char *source, int n){
 
 char * mystrchr(char * s, char c){
     char *p = s;
-    //printf("%s", p);
     while(*p != c){
         p++;
-	if (p > ( s + strlen(s))){
-	  return NULL;
-	}
+        if (p > ( s + strlen(s))){
+          return NULL;
+        }
     }
     
     return p;
@@ -52,6 +51,10 @@ int mystrcmp( char *s1, char *s2 ){
     tot1 += s1[i];
     tot2 += s2[i];
     i++;
+  }
+  if(strlen2(s1) == 0 || strlen2(s2) == 0){ // this is not elegant
+    tot1 += s1[i];
+    tot2 += s2[i];
   }
   return tot1 - tot2;
 }

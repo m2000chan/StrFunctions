@@ -22,7 +22,8 @@ int main(){
 
   // testing strcmp
   printf("Testing strcmp():\n\t[standard]:%d\n\t[mine]:%d\n", strcmp(a,b), mystrcmp(a,b));
-
+  printf("Testing strcmp():\n\t[standard]:%d\n\t[mine]:%d\n", strcmp(c,d), mystrcmp(c,d));
+  // above case messes up
   
   char x[] = "Hello";
   char y[10] = "";
@@ -40,6 +41,9 @@ int main(){
     const char n = 'z';
     printf("\t[standard]:\t%s\n", strchr(v, u));
     printf("\t[mine]:\t\t%s\n", mystrchr(m, n));
+
+    //printf("\t[standard]:\t%s\n", strchr(c, d));
+    //printf("\t[mine]:\t\t%s\n", mystrchr(c, d));
     
       return 0;
 }
